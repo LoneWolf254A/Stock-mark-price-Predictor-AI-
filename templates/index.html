@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Price Predictor</title>
+
+    <link rel="stylesheet" href="{{url_for('static',filename="css/style.css")}}">
+</head>
+
+<body>
+    
+    <div class="box">
+        <div class="container">
+        <h1 >
+            Stock Market Price Predictor
+        </h1>
+        </div>
+        <div class="container1">
+            <h3>Made By Abhimanyu </h3>
+        </div>
+        <nav>
+            <button class="btn">
+                <a href="#1st">
+                <span class="btn-text-one">Try it</span>
+                
+                <span class="btn-text-two">Great!</span>
+            </a>
+            </button>
+            
+    </nav>
+    </div>
+
+    <div class="box1">
+
+
+    </div>
+    <section id="1st"> 
+
+
+    <div class="box2" >
+    <form action="{{url_for('predict')}}" method="post">
+    
+    
+        <div class="in1">
+            <h3>Open :</h3>
+            <input type="text" name="Open" class="input" required="required"/>
+        </div>
+    
+        <div class="in2">
+            <h3>High :</h3>
+            <input type="text" name="High" class="input" required="required"/>
+        </div>
+    
+        <div class="in3">
+            <h3>Low :</h3>
+            <input type="text" name="Low" class="input" required="required"/>
+        </div>
+    
+        <div class="in4">
+            <h3>Volumn :</h3>
+            <input type="text" name="Volumn" class="input" required="required"/>
+        </div>
+        <div class="post">
+            <input class = "button"type="submit">
+        </div>
+        <div class="Hi">
+            <h4> {{prediction_text}}</h4>
+        </div>
+    </div>
+
+</form>
+</section>
+
+
+</body>
+</html>
